@@ -1,0 +1,15 @@
+GIT
+-tạo repo trên github và gitlab
+-tạo nhánh cho dev, ko dùng trên master 
+-git init để tạo kho lưu trữ
+-git remote để kết nối các kho
+-git checkout -b (tạo nhánh và chuyển nhánh)
+ git branch (tên nhánh) nhưng ko tự động chuyển phải dùng git checkout -tenbranch 
+
+-git add 
+
+-git commit
+
+-git pull origin
+
+-git push
