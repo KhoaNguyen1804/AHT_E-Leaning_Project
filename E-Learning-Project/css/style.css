@@ -17,7 +17,7 @@ img {
 }
 
 html {
-  font-size: 50%;
+  font-size: 100%;
   overflow-x: hidden;
 }
 html::-webkit-scrollbar {
@@ -41,4 +41,101 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   z-index: 1000;
+}
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.header .logo i {
+  color: #0eb582;
+}
+
+.navbar {
+  position: relative;
+}
+.navbar #close-navbar {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: #444;
+  display: none;
+}
+.navbar #close-navbar:hover {
+  transform: rotate(90deg);
+}
+.navbar a {
+  margin-right: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+.navbar a:hover {
+  color: #0eb582;
+}
+
+.icons div {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: #444;
+  margin-left: 1.5rem;
+}
+.icons div:hover {
+  color: #0eb582;
+}
+
+#menu-btn {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 2rem 5%;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    right: -105%;
+    width: 30rem;
+    background: #fff;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .header .navbar #close-navbar {
+    display: block;
+  }
+  .header .navbar.active {
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    right: 0;
+  }
+  .header .navbar a {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
