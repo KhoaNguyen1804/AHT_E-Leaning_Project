@@ -57,12 +57,11 @@ html{
    }
 }
 
-
-
-
 .header{
     position: sticky;
-    top:0; left:0; right:0;
+    top:0; 
+    left:0; 
+    right:0;
     background: $white;
     box-shadow: $box-shadow;
     padding:2rem 10%;
@@ -107,7 +106,6 @@ html{
    }
 } 
    
-
 .icons div{
    cursor: pointer;
    font-size: 2.5rem;
