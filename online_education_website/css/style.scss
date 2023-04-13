@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+@import url('../base/_header.scss');
 
-$green:#00E77F;
+$green:rgb(101,177,103);
 $white:#fff;
 $light-white:#aaa;
 $black:#3d3d3d;
@@ -78,36 +79,6 @@ section {
   span {
     color: $green;
     text-transform: uppercase;
-  }
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: $light-bg;
-
-  .flex {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo {
-      font-size: 2.5rem;
-      color:$white;
-    }
-
-    .navbar a {
-      margin-left: 2rem;
-      color: $light-white;
-      font-size: 2rem;
-    }
-    .navbar a:hover {
-      color: $green;
-    }
   }
 }
 
@@ -446,6 +417,9 @@ section {
   }
 }
 
+/*sign up*/
+
+
 
 
 
@@ -521,88 +495,109 @@ section {
 }
 
 /*login*/
-.login-from{
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background: transparent;
-  border: 2px solid rgba($color: #000000, $alpha: 1.0);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-  display:flex;
-  justify-content: center;
-  align-items:center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
-
-.form-box .login-from{
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
   width: 100%;
-  padding: 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
 }
-
-.form-box h2{
-  font-size: 2rem;
-  color:#00E77F;
-  text-align: center;
-}
-.input-box{
-  position: relative;
-  width: 100% ;
-  height: 50px;
-  border-bottom: 2px solid #00E77F;
-  margin:30px 0;
-
-}
-
-.input-box label{
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  font-weight: 500;
-  pointer-events: none;
-}
-.input-box input:focus~label,
-.input-box input:valid~label {
-  top: -5px;
-}
-.input-box input{
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  color: #ffffff;
+.wrapper .title{
+  height: 90px;
+  background: $green;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
   font-weight: 600;
-  padding:0 35px 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.input-box .icon{
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: $green;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  
   position: absolute;
-  right: 8px;
-  font-size: 1.2rem;
-  color: #00E77F;
-  line-height: 57px;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: $green;
+  border: 1px solid $green;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.remember-forgot{
-  font-size: .9rem;
-  color:#00E77F;
-  font-weight: 500;
- margin: -15px 0 15px;
- display: flex;
- justify-content: space-between; 
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
 }
-.remember-forgot label input{
-  accent-color: #00e77f;
-  margin-right: 3px;
-}
-.remember-forgot a{
-  color:#00E77F;
+.wrapper form .pass a{
+  color: $green;
+  font-size: 17px;
   text-decoration: none;
 }
-
-.remember-forgot a:hover{
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: $green;
+  border: 1px solid ;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #12876f;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: $green;
+  text-decoration: none;
+}
+form .signup-link a:hover{
   text-decoration: underline;
 }
